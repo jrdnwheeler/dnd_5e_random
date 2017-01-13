@@ -1,0 +1,57 @@
+ToDo
+[x] Redo Race and class like charBG and charHW
+[ ] Maybe change charClass to choose best class based on stats?
+[ ] Finish filling in backgrounds table
+
+
+Character Sheet Values
+[ ] Random Name
+[ ] Choose level - make sure to calculate level Mods
+[x] random roll stats (stats)
+    [x] ability mod (stats)
+    [x] stat proficiencies (stats)
+[x] race
+    [x] subrace (race)
+    [x] ability scores to add to stats
+    [ ] skills
+    [ ] languages
+    [ ] tools
+    [ ] speed
+    [x] size (race)
+    [x] gender (misc)
+    [x] age (race)
+    [x] height (race)
+    [x] weight (race)
+[x] class (classes)
+    [x] wealth
+    [ ] hit points
+    [ ] Proficiencies
+        [ ] armor
+        [ ] weapons
+        [ ] tools
+        [ ] saving throws / ability mod + proficiency mod in stat
+        [ ] skills
+    [ ] equipment, if not purchasing**
+[x] alignment (race)
+[ ] diety
+[ ] initiative modifier
+[ ] attacks per turn
+[ ] perception, including skill bonus
+[ ] hp
+[ ] ac / [ ] choose random armor based on class and race
+[ ] damage / [ ] choose 2x random weapon based on class and race
+[x] trinket (equipment)
+[ ] carrying capacity
+    [ ] weight of all items
+[x] background (backgrounds) / still need to write all the stuff, code is good
+    [x] equipment, if not purchasing**
+    [x] 2x personality (backgrounds)
+    [x] ideal (backgrounds)
+    [x] bond (backgrounds)
+    [x] flaw (backgrounds)
+    [x] skills
+    [x] tools
+    [x] language
+    [x] wealth
+
+** random generator will always purchase, write but comment out
