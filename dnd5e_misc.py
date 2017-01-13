@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Dungeons and Dragons 5th Edition Character Generator
+Dungeons and Dragons 5th Edition Character Generator.
 
-Misc Calculators and Generators
+Misc Calculators and Generators.
 """
 
 import random
@@ -23,5 +23,11 @@ misc = {
     ]
 }
 
+
 def getGender():
+    """
+    getGender function.
+
+    Select a gender randomly.
+    """
     return random.choice(misc['gender'])

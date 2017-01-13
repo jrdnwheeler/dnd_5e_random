@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Dungeons and Dragons 5th Edition Character Generator
+Dungeons and Dragons 5th Edition Character Generator.
 
 Race Selector
 """
@@ -24,13 +24,17 @@ classes = {
     "bard": {
         "hit_die": "d8",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "cleric": {
         "hit_die": "d8",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "druid": {
@@ -42,54 +46,73 @@ classes = {
     "fighter": {
         "hit_die": "d10",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "monk": {
         "hit_die": "d8",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)))
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)))
         }
     },
     "paladin": {
         "hit_die": "d10",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "ranger": {
         "hit_die": "d10",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "rogue": {
         "hit_die": "d8",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4)) * 10)
         }
     },
     "sorcerer": {
         "hit_die": "d6",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4)) * 10)
         }
     },
     "warlock": {
         "hit_die": "d8",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4)) * 10)
         }
     },
     "wizard": {
         "hit_die": "d6",
         "wealth": {
-            "gp": ((random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4) + random.randint(1, 4)) * 10)
+            "gp": ((random.randint(1, 4) + random.randint(1, 4) +
+                    random.randint(1, 4) + random.randint(1, 4)) * 10)
         }
     }
 }
 
+
 def chooseClass():
+    """
+    chooseClass funtion.
+    
+    Appends all the classes from the above dictionary into a quick reference
+    list, then randomly selects a class, wealth, and hit die.
+    """
     cList = []
 
     for cla in classes:

@@ -2,10 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Dungeons and Dragons 5th Edition Character Generator
+Dungeons and Dragons 5th Edition Character Generator.
 
-Race Selector
--Make sure to update dnd5e_heightweight if adding more races
+Race Selector.
 """
 
 import random
@@ -32,7 +31,7 @@ races = {
             "dex": 2,
             "int": 1
         },
-        "baseHeight": 54, # height 2d10, weight 1d4
+        "baseHeight": 54,  # height 2d10, weight 1d4
         "baseWeight": 90,
         "modHeight": (random.randint(1, 10) + random.randint(1, 10)),
         "modWeight": (random.randint(1, 4)),
@@ -41,10 +40,12 @@ races = {
         "skill": ["perception"],
         "equipment": ["longsword", "shortsword", "shortbow", "longbow"],
         "resist": [""],
-        "language": ["common", "elvish", random.choice(dndMisc.misc['languages'])],
+        "language": ["common", "elvish",
+                     random.choice(dndMisc.misc['languages'])],
         "spells": [""],
         "misc": {
-            "power": ["fey ancestry", "trance", "sunlight sensitivity", "cantrip"]
+            "power": ["fey ancestry", "trance", "sunlight sensitivity",
+                      "cantrip"]
         }
     },
     "elf_wood": {
@@ -57,7 +58,7 @@ races = {
             "dex": 2,
             "wis": 1
         },
-        "baseHeight": 54, # height 2d10, weight 1d4
+        "baseHeight": 54,  # height 2d10, weight 1d4
         "baseWeight": 100,
         "modHeight": (random.randint(1, 10) + random.randint(1, 10)),
         "modWeight": (random.randint(1, 4)),
@@ -69,7 +70,8 @@ races = {
         "language": ["common", "elvish"],
         "spells": [""],
         "misc": {
-            "power": ["fey ancestry", "trance", "sunlight sensitivity", "mask of the wild"]
+            "power": ["fey ancestry", "trance", "sunlight sensitivity",
+                      "mask of the wild"]
         }
     },
     "elf_dark": {
@@ -82,7 +84,7 @@ races = {
             "dex": 2,
             "cha": 1
         },
-        "baseHeight": 53, # height 2d6, weight 1d6
+        "baseHeight": 53,  # height 2d6, weight 1d6
         "baseWeight": 75,
         "modHeight": (random.randint(1, 6) + random.randint(1, 6)),
         "modWeight": (random.randint(1, 6)),
@@ -107,7 +109,7 @@ races = {
             "con": 2,
             "wis": 1
         },
-        "baseHeight": 44, # height 2d4, weight 2d6
+        "baseHeight": 44,  # height 2d4, weight 2d6
         "baseWeight": 115,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (random.randint(1, 6) + random.randint(1, 6)),
@@ -119,7 +121,8 @@ races = {
         "language": ["common", "dwarvish"],
         "spells": ["", ""],
         "misc": {
-            "power": ["dwarven resiliance",  "stonecunning", "tool proficiency", "dwarven toughness"]
+            "power": ["dwarven resiliance",  "tool proficiency",
+                      "stonecunning", "dwarven toughness"]
         }
     },
     "dwarf_mtn": {
@@ -132,19 +135,21 @@ races = {
             "con": 2,
             "str": 2
         },
-        "baseHeight": 48, # height 2d4, weight 2d6
+        "baseHeight": 48,  # height 2d4, weight 2d6
         "baseWeight": 130,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (random.randint(1, 6) + random.randint(1, 6)),
         "speed": 25,
         "vision": "dark60",
         "skill": [""],
-        "equipment": ["battleaxe", "handaxe", "throwing hammer", "warhammer", "light armor", "medium armor"],
+        "equipment": ["battleaxe", "handaxe", "throwing hammer", "warhammer",
+                      "light armor", "medium armor"],
         "resist": [""],
         "language": ["common", "dwarvish"],
         "spells": ["", ""],
         "misc": {
-            "power": ["dwarven resiliance",  "stonecunning", "tool proficiency"]
+            "power": ["dwarven resiliance",  "stonecunning",
+                      "tool proficiency"]
         }
     },
     "gnome_forest": {
@@ -157,7 +162,7 @@ races = {
             "int": 2,
             "dex": 1
         },
-        "baseHeight": 35, # height 2d4, weight 1
+        "baseHeight": 35,  # height 2d4, weight 1
         "baseWeight": 35,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (1),
@@ -182,7 +187,7 @@ races = {
             "int": 2,
             "con": 1
         },
-        "baseHeight": 35, # height 2d4, weight 1
+        "baseHeight": 35,  # height 2d4, weight 1
         "baseWeight": 35,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (1),
@@ -211,7 +216,7 @@ races = {
             "wis": 1,
             "cha": 1
         },
-        "baseHeight": 56, # height 2d10, weight 2d4
+        "baseHeight": 56,  # height 2d10, weight 2d4
         "baseWeight": 110,
         "modHeight": (random.randint(1, 10) + random.randint(1, 10)),
         "modWeight": (random.randint(1, 4) + random.randint(1, 4)),
@@ -236,7 +241,7 @@ races = {
             "cha": 2,
             random.choice(["str", "dex", "con", "int", "wis"]): 1  # select 2x
         },
-        "baseHeight": 57, # height 2d8, weight 2d4
+        "baseHeight": 57,  # height 2d8, weight 2d4
         "baseWeight": 110,
         "modHeight": (random.randint(1, 8) + random.randint(1, 8)),
         "modWeight": (random.randint(1, 4) + random.randint(1, 4)),
@@ -245,7 +250,8 @@ races = {
         "skill": [random.choice(skillTree), random.choice(skillTree)],
         "equipment": [""],
         "resist": [""],
-        "language": ["common", "elven", random.choice(dndMisc.misc['languages'])],
+        "language": ["common", "elven",
+                     random.choice(dndMisc.misc['languages'])],
         "spells": ["", ""],
         "misc": {
             "power": ["Fey Ancestry"]
@@ -261,7 +267,7 @@ races = {
             "str": 2,
             "con": 1
         },
-        "baseHeight": 58, # height 2d10, weight 2d6
+        "baseHeight": 58,  # height 2d10, weight 2d6
         "baseWeight": 140,
         "modHeight": (random.randint(1, 10) + random.randint(1, 10)),
         "modWeight": (random.randint(1, 6) + random.randint(1, 6)),
@@ -286,7 +292,7 @@ races = {
             "dex": 2,
             "cha": 1
         },
-        "baseHeight": 31, # height 2d4, weight 1
+        "baseHeight": 31,  # height 2d4, weight 1
         "baseWeight": 35,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (1),
@@ -298,7 +304,8 @@ races = {
         "language": ["common", "halfling"],
         "spells": ["", ""],
         "misc": {
-            "power": ["lucky", "brave", "halfling nimbleness", "naturally stealthy"]
+            "power": ["lucky", "halfling nimbleness",
+                      "brave", "naturally stealthy"]
         }
     },
     "halfling_stout": {
@@ -311,7 +318,7 @@ races = {
             "dex": 2,
             "con": 1
         },
-        "baseHeight": 31, # height 2d4, weight 1
+        "baseHeight": 31,  # height 2d4, weight 1
         "baseWeight": 35,
         "modHeight": (random.randint(1, 4) + random.randint(1, 4)),
         "modWeight": (1),
@@ -323,7 +330,8 @@ races = {
         "language": ["common", "halfling"],
         "spells": ["", ""],
         "misc": {
-            "power": ["lucky", "brave", "halfling nimbleness", "stout resiliance"]
+            "power": ["lucky", "halfling nimbleness",
+                      "brave", "stout resiliance"]
         }
     },
     "tiefling": {
@@ -336,7 +344,7 @@ races = {
             "cha": 2,
             "int": 1
         },
-        "baseHeight": 57, # height 2d8, weight 2d4
+        "baseHeight": 57,  # height 2d8, weight 2d4
         "baseWeight": 110,
         "modHeight": (random.randint(1, 8) + random.randint(1, 8)),
         "modWeight": (random.randint(1, 4) + random.randint(1, 4)),
@@ -361,7 +369,7 @@ races = {
             "str": 2,
             "cha": 1
         },
-        "baseHeight": 66, # height 2d8, weight, 2d6
+        "baseHeight": 66,  # height 2d8, weight, 2d6
         "baseWeight": 175,
         "modHeight": (random.randint(1, 8) + random.randint(1, 8)),
         "modWeight": (random.randint(1, 6) + random.randint(1, 6)),
@@ -378,7 +386,14 @@ races = {
     }
 }
 
+
 def chooseRace():
+    """
+    chooseRace function.
+
+    Append all the races to a quick reference list, the select all of the
+    character attributes related.
+    """
     rList = []
 
     for race in races:
@@ -388,12 +403,19 @@ def chooseRace():
     charRace = races[selectedRace]['race']
     charSubrace = races[selectedRace]['subrace']
     charSize = races[selectedRace]['size']
-    charAge = random.randint(races[selectedRace]['age'][0], races[selectedRace]['age'][1])
+    charAge = random.randint(races[selectedRace]['age'][0],
+                             races[selectedRace]['age'][1])
     charStatMod = races[selectedRace]['statMod']
 
     return charRace, charSubrace, selectedRace, charSize, charAge, charStatMod
 
+
 def chooseAlignment(charRace):
+    """
+    chooseAlignment function.
+
+    Decide on the characters alignment.
+    """
     charAlign = races[charRace]['alignment']
 
     if 'good' in charAlign:
@@ -402,25 +424,34 @@ def chooseAlignment(charRace):
         elif 'chaotic' in charAlign:
             charAlign = ["chaotic", "good"]
         else:
-            charAlign = [random.choice(["chaotic", "lawful", "neutral"]), "good"]
+            charAlign = [random.choice(["chaotic", "lawful", "neutral"]),
+                         "good"]
     elif 'evil' in charAlign:
         if 'lawful' in charAlign:
             charAlign = ["lawful", "evil"]
         elif 'chaotic' in charAlign:
             charAlign = ["chaotic", "evil"]
         else:
-            charAlign = [random.choice(["chaotic", "lawful", "neutral"]), "evil"]
+            charAlign = [random.choice(["chaotic", "lawful", "neutral"]),
+                         "evil"]
     else:
         if 'lawful' in charAlign:
             charAlign = ["lawful", random.choice(["good", "evil", "neutral"])]
         elif 'chaotic' in charAlign:
             charAlign = ["chaotic", random.choice(["good", "evil", "neutral"])]
         else:
-            charAlign = [random.choice(["chaotic", "lawful", "neutral"]), random.choice(["good", "evil", "neutral"])]
+            charAlign = [random.choice(["chaotic", "lawful", "neutral"]),
+                         random.choice(["good", "evil", "neutral"])]
 
     return charAlign
 
+
 def calcHW(charRace):
+    """
+    calcHW function.
+
+    Calculate random height and weight.
+    """
     for cR in races:
         if cR == charRace:
             modHeight = races[charRace]['modHeight']

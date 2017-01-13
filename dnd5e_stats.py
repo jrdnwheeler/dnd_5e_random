@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-Dungeons and Dragons 5th Edition Character Generator
+Dungeons and Dragons 5th Edition Character Generator.
 
-Stats Generator and Calculator
+Stats Generator and Calculator.
 """
 
 import random
@@ -75,7 +75,13 @@ stats = {
     }
 }
 
+
 def rollStats():
+    """
+    rollStats function.
+
+    Roll random dice for character stats.
+    """
     x = 0
 
     while x < 4:
@@ -85,19 +91,30 @@ def rollStats():
     rolledStat = stats['statRolls']
     return rolledStat
 
+
 def calcAbilityMod(statRolled, mods):
-    for aM in statRolled: # add rolled stats to dict
+    """
+    calcAbilityMod function.
+
+    Calculate character ability modifiers, based on stats.
+    """
+    for aM in statRolled:  # add rolled stats to dict
         stats['abilityMod'][aM] += statRolled[aM]
 
-    for aM in mods: # add mods on top of rolled stats
+    for aM in mods:  # add mods on top of rolled stats
         stats['abilityMod'][aM] += mods[aM]
 
-    for aM in stats['abilityMod']: # calc the abilityMod, reassign
+    for aM in stats['abilityMod']:  # calc the abilityMod, reassign
         stats['abilityMod'][aM] = ((stats['abilityMod'][aM] - 10) // 2)
 
     abilityMod = stats['abilityMod']
     return abilityMod
 
+
 def getProficiency(level):
-    if level in stats['proficiency']:
-        return stats['proficiency'][level]
+    """
+    getProficiency function.
+    
+    Return proficiency from dictionary.
+    """
+    return stats['proficiency'][level]

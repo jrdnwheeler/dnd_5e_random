@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Dungeons and Dragons 5th Edition Character Generator
+Dungeons and Dragons 5th Edition Character Generator.
 
 The player enters some basic choices and a new character is generated for the
 player with all available stats, armor, and weapons chosen randomly. This is
@@ -36,15 +36,15 @@ while True:
             continue
 
 charProf = dndStats.getProficiency(charLevel)
-charStats = dndStats.rollStats() # Roll random stats
-charRace = dndRaces.chooseRace() # Choose a Race
-charAbility = dndStats.calcAbilityMod(charStats, charRace[5]) # calc Ability Mod
-charClass = dndClasses.chooseClass() # Choose a Class
-charAlign = dndRaces.chooseAlignment(charRace[2]) # Character Alignment
-charHW = dndRaces.calcHW(charRace[2]) # calc height and weight
-charBG = dndBG.chooseBG() # Background selection
-charWealth = charBG[8]['gp'] + charClass[1]['gp'] # calc wealth
-charEQtrinket = dndEQ.chooseTrinket() # random d100 trinket
+charStats = dndStats.rollStats()  # Roll random stats
+charRace = dndRaces.chooseRace()  # Choose a Race
+charAbility = dndStats.calcAbilityMod(charStats, charRace[5])  # calc Mod
+charClass = dndClasses.chooseClass()  # Choose a Class
+charAlign = dndRaces.chooseAlignment(charRace[2])  # Character Alignment
+charHW = dndRaces.calcHW(charRace[2])  # calc height and weight
+charBG = dndBG.chooseBG()  # Background selection
+charWealth = charBG[8]['gp'] + charClass[1]['gp']  # calc wealth
+charEQtrinket = dndEQ.chooseTrinket()  # random d100 trinket
 
 # Display info, write to Excel
 print("Race:", charRace[0])
@@ -68,9 +68,9 @@ print("Personality:\n-", charBG[1][0], "\n-", charBG[1][1])
 print("Ideal:", charBG[2])
 print("Bond:", charBG[3])
 print("Flaw:", charBG[4])
-print("Pre-Equipment Wealth:", charWealth, "gp") # comment out, show later
+print("Pre-Equipment Wealth:", charWealth, "gp")  # comment out, show later
 print("BG Skills:", charBG[5])
 print("BG Tools:", charBG[9])
 print("BG Languages:", charBG[6])
-#print("BG Equipment:", charBG[7]) # only used if not using purchased
+# print("BG Equipment:", charBG[7])  # only used if not using purchased
 print("Trinket:", charEQtrinket[0], "({})".format(charEQtrinket[1]))
